@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rootlet - For Tiny Learners</title>
+  <meta name="description" content="Rootlet Preschool - Every day at Rootlet is a child's best day.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- 1. FIXED STICKY DARK GLASSMORPHISM NAVBAR (STAYS ON SCREEN WHILE SCROLLING) -->
+  <header class="hero-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="header-logo">
+          <i class="fa-solid fa-seedling"></i> Rootlet
+        </a>
+
+        <ul class="header-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#program">Our program</a></li>
+          <li><a href="#contact">Contact details</a></li>
+        </ul>
+
+        <button class="btn-yellow open-modal-btn">Enquiry</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION WITH USER's 1.37MB HD PNG FILE (toddler_hero.png) -->
+  <section class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-headline">
+        <h1>
+          <span class="line-sans">Every day at Rootlet</span>
+          <span class="line-serif">is a child's best day.</span>
+        </h1>
+      </div>
+      <div class="hero-subtext">
+        <p>At Rootlet, children aren't rushed to grow up. They explore, imagine, build friendships, eat fresh food, play outdoors, and discover the joy of learning—every single day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING CORAL FORM BAR (WHATSAPP REDIRECT TO 8867672627) -->
+  <div class="container hero-form-wrapper">
+    <div class="coral-form-bar">
+      <div class="form-bar-header">
+        <h3>Enquire About Enrolment</h3>
+        <span class="subtitle-notice">We'll get back to you within 24 hours.</span>
+      </div>
+      
+      <form id="heroForm" class="form-inputs-grid">
+        <!-- 1. Parent / Guardian Name -->
+        <div class="form-group-item">
+          <label>Parent / Guardian Name</label>
+          <input type="text" class="form-input-control" placeholder="Full name" required>
+        </div>
+
+        <!-- 2. Email Address -->
+        <div class="form-group-item">
+          <label>Email Address</label>
+          <input type="email" class="form-input-control" placeholder="info@rootlet.org.in" required>
+        </div>
+
+        <!-- 3. Phone Number -->
+        <div class="form-group-item">
+          <label>Phone Number</label>
+          <input type="tel" class="form-input-control" placeholder="8867672627" required>
+        </div>
+
+        <!-- 4. Child's Date of Birth -->
+        <div class="form-group-item">
+          <label>Child's Date of Birth</label>
+          <input type="text" class="form-input-control" placeholder="DD / MM / YYYY" onfocus="(this.type='date')" required>
+        </div>
+
+        <!-- 5. Program of Interest -->
+        <div class="form-group-item">
+          <label>Program of Interest</label>
+          <select class="form-input-control" required>
+            <option value="" disabled selected>Select program</option>
+            <option value="Play Group">Play Group</option>
+            <option value="Toddler">Toddler</option>
+            <option value="Pre-Nursery">Pre-Nursery</option>
+            <option value="LKG">LKG</option>
+            <option value="UKG">UKG</option>
+            <option value="After School">After School</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-yellow" style="padding: 12px 32px; height: 48px;">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. OUR PROGRAM SECTION -->
+  <section class="section-padding" id="program">
+    <div class="container text-center">
+      <div class="section-title-wrapper">
+        <h2><span class="serif-text">Our</span> <span class="sans-bold">Program</span></h2>
+      </div>
+
+      <div class="program-cards-grid">
+        <div class="program-image-card">
+          <img src="/images/child_card.jpg" alt="Play Group">
+          <div class="program-card-overlay">
+            <h3>Play Group</h3>
+          </div>
+        </div>
+
+        <div class="program-image-card">
+          <img src="/images/studio_sensory.jpg" alt="Toddler">
+          <div class="program-card-overlay">
+            <h3>Toddler</h3>
+          </div>
+        </div>
+
+        <div class="program-image-card">
+          <img src="/images/studio_creative.jpg" alt="Pre-Nursery">
+          <div class="program-card-overlay">
+            <h3>Pre-Nursery</h3>
+          </div>
+        </div>
+
+        <div class="program-image-card">
+          <img src="/images/studio_fine_motor.jpg" alt="LKG">
+          <div class="program-card-overlay">
+            <h3>LKG</h3>
+          </div>
+        </div>
+
+        <div class="program-image-card">
+          <img src="/images/studio_interactive.jpg" alt="UKG">
+          <div class="program-card-overlay">
+            <h3>UKG</h3>
+          </div>
+        </div>
+
+        <div class="program-image-card">
+          <img src="/images/studio_curiosity.jpg" alt="After School">
+          <div class="program-card-overlay">
+            <h3>After School</h3>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-yellow open-modal-btn">Enquire Now &rarr;</button>
+    </div>
+  </section>
+
+  <!-- 4. WHAT MAKES ROOTLET TRULY DIFFERENT -->
+  <section class="section-padding" style="background-color: var(--figma-bg-sand);" id="about">
+    <div class="container text-center">
+      <div class="section-title-wrapper">
+        <h2><span class="serif-text">What Makes</span> <span class="sans-bold">Rootlet</span> <span class="serif-text">Truly Different</span></h2>
+        <p>At Rootlet, every choice we make is about your child's growth, happiness, and a beautiful childhood.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-blue"><i class="fa-solid fa-bowl-food"></i></div>
+          <h4>Fresh Food.<br>Healthy Habits.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-purple"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h4>Zero Screens.<br>Maximum Imagination.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-yellow"><i class="fa-solid fa-tree"></i></div>
+          <h4>Nature Before<br>Notebooks.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-green"><i class="fa-solid fa-face-smile"></i></div>
+          <h4>Safe Spaces.<br>Happy Faces.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-coral"><i class="fa-solid fa-user-check"></i></div>
+          <h4>Teachers Who<br>Truly Know<br>Every Child.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-green"><i class="fa-solid fa-lightbulb"></i></div>
+          <h4>Curiosity<br>Before<br>Curriculum.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-yellow"><i class="fa-regular fa-star"></i></div>
+          <h4>Confidence<br>Without<br>Pressure.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-coral"><i class="fa-solid fa-brain"></i></div>
+          <h4>Emotional<br>Intelligence<br>Every Day.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-blue"><i class="fa-solid fa-people-roof"></i></div>
+          <h4>Parents Included<br>in Every<br>Journey.</h4>
+        </div>
+        <div class="feature-white-card">
+          <div class="feature-circle-icon icon-bg-purple"><i class="fa-solid fa-rainbow"></i></div>
+          <h4>Childhood,<br>Just As It<br>Should Be.</h4>
+        </div>
+      </div>
+
+      <button class="btn-yellow open-modal-btn" style="margin-top: 20px;">View Fees &rarr;</button>
+
+      <!-- 5. DOCTOR SUGGESTIONS CORAL BANNER CARD -->
+      <div class="admission-banner-card text-left">
+        <div class="doctor-banner-header">
+          <h3>Doctor suggestions:</h3>
+          <div class="title-underline"></div>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item">
+            <span class="step-num">1.</span>
+            <p>Nurturing young minds, protecting growing bodies.</p>
+          </div>
+          <div class="step-item">
+            <span class="step-num">2.</span>
+            <p>Our curriculum focuses on the 5 core development milestones recommended by paediatricians.</p>
+          </div>
+          <div class="step-item">
+            <span class="step-num">3.</span>
+            <p>A safe, sanitary and active environment where your child can thrive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. EXPLORE OUR LEARNING STUDIOS -->
+  <section class="section-padding" id="facilities">
+    <div class="container text-center">
+      <div class="section-title-wrapper">
+        <h2><span class="serif-text">Explore Our</span> <span class="sans-bold">Learning Studios</span></h2>
+      </div>
+
+      <div class="studios-grid">
+        <div class="studio-green-card">
+          <div class="studio-thumb">
+            <img src="/images/studio_interactive.jpg" alt="Interactive Media">
+          </div>
+          <div class="studio-content">
+            <h3>Interactive Media</h3>
+            <p>Audio-visual learning tools</p>
+          </div>
+        </div>
+        <div class="studio-green-card">
+          <div class="studio-thumb">
+            <img src="/images/studio_curiosity.jpg" alt="Curiosity Lab Studio">
+          </div>
+          <div class="studio-content">
+            <h3>Curiosity Lab Studio</h3>
+            <p>Hands-on STEM foundation</p>
+          </div>
+        </div>
+        <div class="studio-green-card">
+          <div class="studio-thumb">
+            <img src="/images/studio_sensory.jpg" alt="Sensory Exploration Studio">
+          </div>
+          <div class="studio-content">
+            <h3>Sensory Exploration Studio</h3>
+            <p>Tactile & perceptual play</p>
+          </div>
+        </div>
+        <div class="studio-green-card">
+          <div class="studio-thumb">
+            <img src="/images/studio_fine_motor.jpg" alt="Fine Motor Skill Studio">
+          </div>
+          <div class="studio-content">
+            <h3>Fine Motor Skill Studio</h3>
+            <p>Puzzles, tracing, and craft</p>
+          </div>
+        </div>
+        <div class="studio-green-card">
+          <div class="studio-thumb">
+            <img src="/images/studio_creative.jpg" alt="Creative Expression Center">
+          </div>
+          <div class="studio-content">
+            <h3>Creative Expression Center</h3>
+            <p>Art, drama & storytelling</p>
+          </div>
+        </div>
+        <div class="studio-green-card">
+          <div class="studio-thumb">
+            <img src="/images/studio_nature.jpg" alt="Nature & Discovery Room">
+          </div>
+          <div class="studio-content">
+            <h3>Nature & Discovery Room</h3>
+            <p>Plants, animals & science</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-yellow open-modal-btn">Enquire Now &rarr;</button>
+    </div>
+  </section>
+
+  <!-- 7. WATCH OUR CLASSROOMS IN ACTION -->
+  <section class="video-section">
+    <div class="video-overlay"></div>
+    <div class="video-center-content">
+      <h2>Watch Our Classrooms in Action</h2>
+      <p>Experience the joy of learning.</p>
+      <div class="play-circle-btn open-modal-btn">
+        <i class="fa-solid fa-play"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. OUR THREE FOUNDATIONS -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-title-wrapper text-center">
+        <h2><span class="serif-text">Our three</span> <span class="sans-bold">Foundations</span></h2>
+      </div>
+
+      <div class="foundations-grid">
+        <div class="foundation-card">
+          <div class="foundation-icon-square square-green">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Safety</h3>
+          <p>From thoughtfully designed classrooms to trained educators and live parent updates, every aspect of Rootlet is built around your child's wellbeing.</p>
+        </div>
+
+        <div class="foundation-card">
+          <div class="foundation-icon-square square-coral">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Health</h3>
+          <p>Fresh meals, outdoor play, natural materials, and a screen-free environment help children build strong bodies and healthy routines.</p>
+        </div>
+
+        <div class="foundation-card">
+          <div class="foundation-icon-square square-purple">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3>Intelligence</h3>
+          <p>We encourage children to ask questions, solve problems, and explore their interests through hands-on experiences that make learning meaningful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LIGHT LEAF GREEN CTA BANNER (#84C853) -->
+  <section class="cta-fullwidth-green">
+    <div class="cta-floating-photos-container">
+      <div class="cta-thumb cta-thumb-1">
+        <img src="/images/child_card.jpg" alt="Child Toddler">
+      </div>
+      <div class="cta-thumb cta-thumb-2">
+        <img src="/images/studio_curiosity.jpg" alt="Preschool Building Dusk">
+      </div>
+      <div class="cta-thumb cta-thumb-3">
+        <img src="/images/studio_nature.jpg" alt="Preschool Building">
+      </div>
+      <div class="cta-thumb cta-thumb-4">
+        <img src="/images/studio_creative.jpg" alt="Child Playing">
+      </div>
+
+      <div class="cta-center-text">
+        <h2>
+          <span class="serif-title">Give Your Child More Than</span>
+          <span class="sans-title">an Education.</span>
+        </h2>
+        <p>Give them a childhood they'll always remember.</p>
+        <button class="btn-coral open-modal-btn">Schedule a Visit &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FOOTER WITH UPDATED CONTACT DETAILS & GOOGLE MAPS LINK -->
+  <footer class="footer-dark-figma" id="contact">
+    <div class="container">
+      <div class="footer-figma-grid">
+        <!-- Brand Column -->
+        <div>
+          <div class="footer-brand-logo">
+            <i class="fa-solid fa-seedling"></i> Rootlet
+          </div>
+          <div class="footer-tagline-coral">FOR TINY LEARNERS</div>
+          <p class="footer-desc-text">Rooted in Safety. Growing with Curiosity. Where every child's best day begins.</p>
+          <div class="footer-social-inline">
+            <a href="https://wa.me/918867672627" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div>
+          <div class="footer-col-title">QUICK LINKS</div>
+          <ul class="footer-links-column-list">
+            <li><a href="#program">Programs</a></li>
+            <li><a href="#program">Admissions</a></li>
+            <li><a href="#facilities">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#policies">Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div>
+          <div class="footer-col-title">CONTACT</div>
+          
+          <!-- Address -->
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span>Sannathammanahalli Village, KR Puram, Bangalore, Karnataka - 560036.</span>
+              <br>
+              <!-- Click to see location button -->
+              <a href="https://maps.app.goo.gl/qpoAkRGdTZxDLNqD6?g_st=aw" target="_blank" rel="noopener" class="location-link-btn">
+                <i class="fa-solid fa-location-dot"></i> Click to see location
+              </a>
+            </div>
+          </div>
+
+          <!-- Phone Numbers -->
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span><a href="tel:8867672627">8867672627</a> / <a href="tel:8867678747">8867678747</a></span>
+          </div>
+
+          <!-- Email -->
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span><a href="mailto:info@rootlet.org.in">info@rootlet.org.in</a></span>
+          </div>
+
+          <!-- Website -->
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <span><a href="http://rootlet.org.in" target="_blank" rel="noopener">http://rootlet.org.in</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider-line"></div>
+
+      <div class="footer-bottom-flex">
+        <p>&copy; 2026 Rootlet Preschool. All rights reserved.</p>
+        <p>Made with <i class="fa-solid fa-heart" style="color: var(--figma-coral);"></i> for every child's tomorrow.</p>
+      </div>
+    </div>
+
+    <!-- EXACT FIGMA SECOND SCREENSHOT BOTTOM WAVY GRAPHIC SVG -->
+    <div class="footer-wavy-graphic">
+      <svg viewBox="0 0 1440 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Middle Salmon / Coral Hill -->
+        <path d="M 300 70 C 450 35, 620 20, 780 20 C 940 20, 1080 35, 1180 70 Z" fill="#F06A58"/>
+        
+        <!-- Left Green Hill -->
+        <path d="M 0 35 C 100 15, 220 15, 360 70 H 0 Z" fill="#84C853"/>
+        
+        <!-- Right Green Hill -->
+        <path d="M 1120 70 C 1240 15, 1360 15, 1440 35 V 70 H 1120 Z" fill="#84C853"/>
+      </svg>
+    </div>
+  </footer>
+
+  <!-- Modal Popup -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 8px;">Enquiry & Admission</h3>
+      <p style="color: var(--figma-text-muted); margin-bottom: 24px;">Please submit your details and our team will connect with you on WhatsApp.</p>
+
+      <form id="popupForm">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem;">Parent's Name *</label>
+          <input type="text" class="form-input-control" style="border: 1px solid #DDD;" placeholder="Enter full name" required>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem;">Phone Number *</label>
+          <input type="tel" class="form-input-control" style="border: 1px solid #DDD;" placeholder="8867672627" required>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <label style="display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem;">Select Program</label>
+          <select class="form-input-control" style="border: 1px solid #DDD;">
+            <option value="Play Group">Play Group</option>
+            <option value="Toddler">Toddler</option>
+            <option value="Pre-Nursery">Pre-Nursery</option>
+            <option value="LKG">LKG</option>
+            <option value="UKG">UKG</option>
+            <option value="After School">After School</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-coral" style="width: 100%;">Submit & Connect on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
