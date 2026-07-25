@@ -5,15 +5,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 :root {
+  /* Official Logo Exact Colors from Screenshot */
+  --logo-green: #92CA64;        /* Fresh Sprout Leaf Green */
+  --logo-coral: #F37160;        /* Official Rootlet Coral Red/Salmon */
+  --logo-olive: #6C642A;        /* Tagline Moss Olive */
+
   /* Exact Figma Color Tokens */
   --figma-bg-sand: #F3EBE1;
-  --figma-coral: #F06A58;
+  --figma-coral: #F37160;       /* Updated to match official logo coral */
   --figma-yellow: #F4C746;
   --figma-yellow-hover: #E4B735;
   
   --figma-studio-green: #527E3B;
-  --figma-cta-green: #84C853;     /* Soft vibrant leaf green from user's screenshot */
-  --figma-footer-dark: #2B2D2F;    /* Soft graphite charcoal slate from user's screenshot */
+  --figma-cta-green: #84C853;     /* Soft vibrant leaf green */
+  --figma-footer-dark: #2B2D2F;    /* Soft graphite charcoal slate */
   
   --figma-text-dark: #1F281B;
   --figma-text-muted: #646E60;
@@ -133,17 +138,17 @@ img {
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: 1.05rem;
-  background-color: var(--figma-coral);
+  background-color: var(--logo-coral);
   color: var(--figma-white);
   border-radius: var(--radius-pill);
   border: none;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(240, 106, 88, 0.4);
+  box-shadow: 0 8px 20px rgba(243, 113, 96, 0.4);
   transition: all 0.3s ease;
 }
 
 .btn-coral:hover {
-  background-color: #D65544;
+  background-color: #E25B49;
   transform: translateY(-2px);
 }
 
@@ -168,7 +173,7 @@ img {
   color: var(--figma-text-dark);
 }
 
-/* 1. SMART HIDE & REVEAL HEADER NAVBAR */
+/* SMART HIDE & REVEAL HEADER NAVBAR */
 .hero-header {
   position: fixed;
   top: 20px;
@@ -178,7 +183,6 @@ img {
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-/* Class added on scroll down -> slides up out of view */
 .hero-header.header-hidden {
   transform: translateY(-130%);
   opacity: 0;
@@ -186,7 +190,7 @@ img {
 }
 
 .header-inner {
-  background: rgba(18, 24, 16, 0.65);
+  background: rgba(18, 24, 16, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 20px;
@@ -198,14 +202,35 @@ img {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* Official Logo Styling */
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: var(--figma-white);
+  gap: 10px;
+  text-decoration: none;
+}
+
+.header-logo i.logo-icon {
+  color: var(--logo-green);
+  font-size: 1.6rem;
+}
+
+.header-logo .logo-brand-text {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--logo-coral);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.header-logo .logo-tagline {
   font-family: var(--font-sans);
-  font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--logo-green);
+  display: block;
+  margin-top: 2px;
 }
 
 .header-nav {
@@ -225,7 +250,19 @@ img {
   color: var(--figma-yellow);
 }
 
-/* 2. HERO SECTION */
+/* Eyebrow Tag above section titles */
+.section-eyebrow-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--logo-coral);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+/* HERO SECTION */
 .hero-section {
   position: relative;
   height: 680px;
@@ -298,7 +335,7 @@ img {
 }
 
 .coral-form-bar {
-  background-color: var(--figma-coral);
+  background-color: var(--logo-coral);
   color: var(--figma-white);
   border-radius: var(--radius-xl);
   padding: 32px 40px;
@@ -358,7 +395,7 @@ img {
   height: 48px;
 }
 
-/* 3. OUR PROGRAM */
+/* OUR PROGRAM */
 .section-title-wrapper {
   margin-bottom: 48px;
 }
@@ -412,7 +449,7 @@ img {
   font-family: var(--font-serif);
 }
 
-/* 4. WHAT MAKES ROOTLET TRULY DIFFERENT */
+/* WHAT MAKES ROOTLET TRULY DIFFERENT */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -451,9 +488,9 @@ img {
 .icon-bg-green { background: #E4F4E4; color: #27AE60; }
 .icon-bg-coral { background: #FDEBE8; color: #E74C3C; }
 
-/* 5. DOCTOR SUGGESTIONS CORAL BANNER CARD */
+/* DOCTOR SUGGESTIONS CORAL BANNER CARD */
 .admission-banner-card {
-  background-color: var(--figma-coral);
+  background-color: var(--logo-coral);
   color: var(--figma-white);
   border-radius: var(--radius-xl);
   padding: 44px 48px;
@@ -490,7 +527,7 @@ img {
   color: var(--figma-yellow);
 }
 
-/* 6. LEARNING STUDIOS */
+/* LEARNING STUDIOS */
 .studios-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -520,7 +557,7 @@ img {
   padding: 24px;
 }
 
-/* 7. WATCH OUR CLASSROOMS IN ACTION */
+/* WATCH OUR CLASSROOMS IN ACTION */
 .video-section {
   position: relative;
   height: 480px;
@@ -549,7 +586,7 @@ img {
 .play-circle-btn {
   width: 80px;
   height: 80px;
-  background-color: var(--figma-coral);
+  background-color: var(--logo-coral);
   color: var(--figma-white);
   border-radius: 50%;
   display: inline-flex;
@@ -559,7 +596,7 @@ img {
   cursor: pointer;
 }
 
-/* 8. OUR THREE FOUNDATIONS */
+/* OUR THREE FOUNDATIONS */
 .foundations-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -584,10 +621,10 @@ img {
 }
 
 .square-green { background: #EAF4E8; color: #4B7735; }
-.square-coral { background: #FCEBE8; color: #F06A58; }
+.square-coral { background: #FCEBE8; color: #F37160; }
 .square-purple { background: #F3EAF8; color: #8E44AD; }
 
-/* 9. LIGHT LEAF GREEN CTA BANNER (#84C853) */
+/* LIGHT LEAF GREEN CTA BANNER (#84C853) */
 .cta-fullwidth-green {
   background-color: var(--figma-cta-green);
   color: var(--figma-white);
@@ -692,7 +729,7 @@ img {
   font-weight: 500;
 }
 
-/* 10. SOFT GRAPHITE CHARCOAL FOOTER (#2B2D2F) */
+/* SOFT GRAPHITE CHARCOAL FOOTER (#2B2D2F) */
 .footer-dark-figma {
   background-color: var(--figma-footer-dark);
   color: rgba(255, 255, 255, 0.75);
@@ -713,22 +750,23 @@ img {
   align-items: center;
   gap: 10px;
   font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--figma-coral);
+  font-weight: 400;
+  font-family: var(--font-serif);
+  color: var(--logo-coral);
   margin-bottom: 4px;
 }
 
 .footer-brand-logo i {
-  color: #84C853;
+  color: var(--logo-green);
 }
 
 .footer-tagline-coral {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--figma-coral);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--logo-green);
   letter-spacing: 0.5px;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .footer-desc-text {

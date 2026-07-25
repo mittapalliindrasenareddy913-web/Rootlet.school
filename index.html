@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rootlet - For Tiny Learners</title>
+  <title>Rootlet - for Tiny Learners</title>
   <meta name="description" content="Rootlet Preschool - Every day at Rootlet is a child's best day.">
   
   <!-- FontAwesome Icons -->
@@ -14,12 +14,17 @@
 </head>
 <body>
 
-  <!-- 1. FIXED STICKY DARK GLASSMORPHISM NAVBAR -->
+  <!-- 1. FIXED STICKY DARK GLASSMORPHISM NAVBAR (EXACT OFFICIAL LOGO MATCH) -->
   <header class="hero-header">
     <div class="container">
       <div class="header-inner">
+        <!-- Official Logo Matching Screenshot -->
         <a href="#" class="header-logo">
-          <i class="fa-solid fa-seedling"></i> Rootlet
+          <i class="fa-solid fa-seedling logo-icon"></i>
+          <div>
+            <span class="logo-brand-text">Rootlet</span>
+            <span class="logo-tagline">for Tiny Learners</span>
+          </div>
         </a>
 
         <ul class="header-nav">
@@ -34,7 +39,7 @@
     </div>
   </header>
 
-  <!-- 2. HERO SECTION -->
+  <!-- 2. HERO SECTION WITH USER's 1.37MB HD PNG FILE (toddler_hero.png) -->
   <section class="hero-section" id="home">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
@@ -88,9 +93,9 @@
           <label>Program of Interest</label>
           <select class="form-input-control" required>
             <option value="" disabled selected>Select program</option>
-            <option value="Play Group">Play Group</option>
             <option value="Toddler">Toddler</option>
-            <option value="Pre-Nursery">Pre-Nursery</option>
+            <option value="Play Group">Play Group</option>
+            <option value="Nursery">Nursery</option>
             <option value="LKG">LKG</option>
             <option value="UKG">UKG</option>
             <option value="After School">After School</option>
@@ -111,43 +116,49 @@
       </div>
 
       <div class="program-cards-grid">
+        <!-- 1. Toddler -->
         <div class="program-image-card">
-          <img src="/images/child_card.jpg" alt="Play Group">
-          <div class="program-card-overlay">
-            <h3>Play Group</h3>
-          </div>
-        </div>
-
-        <div class="program-image-card">
-          <img src="/images/studio_sensory.jpg" alt="Toddler">
+          <img src="/images/toddler_card.jpg?v=30" alt="Toddler">
           <div class="program-card-overlay">
             <h3>Toddler</h3>
           </div>
         </div>
 
+        <!-- 2. Play Group -->
         <div class="program-image-card">
-          <img src="/images/studio_creative.jpg" alt="Pre-Nursery">
+          <img src="/images/playgroup_card.jpg?v=30" alt="Play Group">
           <div class="program-card-overlay">
-            <h3>Pre-Nursery</h3>
+            <h3>Play Group</h3>
           </div>
         </div>
 
+        <!-- 3. Nursery -->
         <div class="program-image-card">
-          <img src="/images/studio_fine_motor.jpg" alt="LKG">
+          <img src="/images/nursery_card.jpg?v=30" alt="Nursery">
+          <div class="program-card-overlay">
+            <h3>Nursery</h3>
+          </div>
+        </div>
+
+        <!-- 4. LKG -->
+        <div class="program-image-card">
+          <img src="/images/lkg_card.jpg?v=30" alt="LKG">
           <div class="program-card-overlay">
             <h3>LKG</h3>
           </div>
         </div>
 
+        <!-- 5. UKG -->
         <div class="program-image-card">
-          <img src="/images/studio_interactive.jpg" alt="UKG">
+          <img src="/images/ukg_card.jpg?v=30" alt="UKG">
           <div class="program-card-overlay">
             <h3>UKG</h3>
           </div>
         </div>
 
+        <!-- 6. After School -->
         <div class="program-image-card">
-          <img src="/images/studio_curiosity.jpg" alt="After School">
+          <img src="/images/afterschool_card.jpg?v=30" alt="After School">
           <div class="program-card-overlay">
             <h3>After School</h3>
           </div>
@@ -162,8 +173,9 @@
   <section class="section-padding" style="background-color: var(--figma-bg-sand);" id="about">
     <div class="container text-center">
       <div class="section-title-wrapper">
+        <span class="section-eyebrow-tag">The Rootlet Signature</span>
         <h2><span class="serif-text">What Makes</span> <span class="sans-bold">Rootlet</span> <span class="serif-text">Truly Different</span></h2>
-        <p>At Rootlet, every choice we make is about your child's growth, happiness, and a beautiful childhood.</p>
+        <p>At Rootlet, Every Choice We Make Is About Your Children's Growth, Happiness, And A Beautiful Childhood.</p>
       </div>
 
       <div class="features-grid">
@@ -243,58 +255,69 @@
       </div>
 
       <div class="studios-grid">
+        <!-- 1. Fine Motor Studio -->
         <div class="studio-green-card">
           <div class="studio-thumb">
-            <img src="/images/studio_interactive.jpg" alt="Interactive Media">
+            <img src="/images/studio_fine_motor.jpg?v=40" alt="Fine Motor Studio">
           </div>
           <div class="studio-content">
-            <h3>Interactive Media</h3>
-            <p>Audio-visual learning tools</p>
+            <h3>Fine Motor Studio</h3>
+            <p>Precision, dexterity & creative craftsmanship</p>
           </div>
         </div>
+
+        <!-- 2. Gross Motor Studio -->
         <div class="studio-green-card">
           <div class="studio-thumb">
-            <img src="/images/studio_curiosity.jpg" alt="Curiosity Lab Studio">
+            <img src="/images/studio_gross_motor.jpg?v=40" alt="Gross Motor Studio">
           </div>
           <div class="studio-content">
-            <h3>Curiosity Lab Studio</h3>
-            <p>Hands-on STEM foundation</p>
+            <h3>Gross Motor Studio</h3>
+            <p>Strength, balance & confident movement</p>
           </div>
         </div>
+
+        <!-- 3. Sensory Exploration Studio -->
         <div class="studio-green-card">
           <div class="studio-thumb">
-            <img src="/images/studio_sensory.jpg" alt="Sensory Exploration Studio">
+            <img src="/images/studio_sensory.jpg?v=40" alt="Sensory Exploration Studio">
           </div>
           <div class="studio-content">
             <h3>Sensory Exploration Studio</h3>
-            <p>Tactile & perceptual play</p>
+            <p>Awakening the senses through immersive exploration</p>
           </div>
         </div>
+
+        <!-- 4. Practical Life Studio -->
         <div class="studio-green-card">
           <div class="studio-thumb">
-            <img src="/images/studio_fine_motor.jpg" alt="Fine Motor Skill Studio">
+            <img src="/images/studio_practical.jpg?v=40" alt="Practical Life Studio">
           </div>
           <div class="studio-content">
-            <h3>Fine Motor Skill Studio</h3>
-            <p>Puzzles, tracing, and craft</p>
+            <h3>Practical Life Studio</h3>
+            <p>Nurturing independence through everyday experiences</p>
           </div>
         </div>
+
+        <!-- 5. Creative Expression Studio -->
         <div class="studio-green-card">
           <div class="studio-thumb">
-            <img src="/images/studio_creative.jpg" alt="Creative Expression Center">
+            <img src="/images/studio_creative.jpg?v=40" alt="Creative Expression Studio">
           </div>
           <div class="studio-content">
-            <h3>Creative Expression Center</h3>
-            <p>Art, drama & storytelling</p>
+            <h3>Creative Expression Studio</h3>
+            <p>Where imagination finds its voice</p>
           </div>
         </div>
+
+        <!-- 6. Nature & Discovery Studio -->
         <div class="studio-green-card">
           <div class="studio-thumb">
-            <img src="/images/studio_nature.jpg" alt="Nature & Discovery Room">
+            <img src="/images/studio_nature.jpg?v=40" alt="Nature & Discovery Studio">
           </div>
           <div class="studio-content">
-            <h3>Nature & Discovery Room</h3>
-            <p>Plants, animals & science</p>
+            <h3>Nature & Discovery Studio</h3>
+            <p>Exploring nature, science & the wonder of discovery</p>
           </div>
         </div>
       </div>
@@ -350,20 +373,27 @@
     </div>
   </section>
 
-  <!-- 9. LIGHT LEAF GREEN CTA BANNER (#84C853) -->
+  <!-- 9. LIGHT LEAF GREEN CTA BANNER (#84C853) WITH REAL SCHOOL BUILDING PHOTOS -->
   <section class="cta-fullwidth-green">
     <div class="cta-floating-photos-container">
+      <!-- 1. Left Top: Front view perspective -->
       <div class="cta-thumb cta-thumb-1">
-        <img src="/images/child_card.jpg" alt="Child Toddler">
+        <img src="/images/school_building_1.jpg?v=50" alt="Rootlet Preschool Front View">
       </div>
+      
+      <!-- 2. Left Bottom: Inner courtyard stage -->
       <div class="cta-thumb cta-thumb-2">
-        <img src="/images/studio_curiosity.jpg" alt="Preschool Building Dusk">
+        <img src="/images/school_building_2.jpg?v=50" alt="Rootlet Preschool Courtyard Stage">
       </div>
+      
+      <!-- 3. Right Top: Front elevation view -->
       <div class="cta-thumb cta-thumb-3">
-        <img src="/images/studio_nature.jpg" alt="Preschool Building">
+        <img src="/images/school_building_3.jpg?v=50" alt="Rootlet Preschool Front Elevation">
       </div>
+      
+      <!-- 4. Right Bottom: Aerial top-down view -->
       <div class="cta-thumb cta-thumb-4">
-        <img src="/images/studio_creative.jpg" alt="Child Playing">
+        <img src="/images/school_building_4.jpg?v=50" alt="Rootlet Preschool Aerial Courtyard">
       </div>
 
       <div class="cta-center-text">
@@ -377,16 +407,16 @@
     </div>
   </section>
 
-  <!-- 10. FOOTER WITH UPDATED GOOGLE MAPS LINK & CONTACT DETAILS -->
+  <!-- 10. FOOTER WITH OFFICIAL LOGO & UPDATED GOOGLE MAPS LINK -->
   <footer class="footer-dark-figma" id="contact">
     <div class="container">
       <div class="footer-figma-grid">
-        <!-- Brand Column -->
+        <!-- Official Logo Column -->
         <div>
           <div class="footer-brand-logo">
             <i class="fa-solid fa-seedling"></i> Rootlet
           </div>
-          <div class="footer-tagline-coral">FOR TINY LEARNERS</div>
+          <div class="footer-tagline-coral">for Tiny Learners</div>
           <p class="footer-desc-text">Rooted in Safety. Growing with Curiosity. Where every child's best day begins.</p>
           <div class="footer-social-inline">
             <a href="https://wa.me/918867672627" target="_blank" rel="noopener">WhatsApp</a>
@@ -449,16 +479,16 @@
 
       <div class="footer-bottom-flex">
         <p>&copy; 2026 Rootlet Preschool. All rights reserved.</p>
-        <p>Made with <i class="fa-solid fa-heart" style="color: var(--figma-coral);"></i> for every child's tomorrow.</p>
+        <p>Made with <i class="fa-solid fa-heart" style="color: var(--logo-coral);"></i> for every child's tomorrow.</p>
       </div>
     </div>
 
     <!-- EXACT FIGMA SECOND SCREENSHOT BOTTOM WAVY GRAPHIC SVG -->
     <div class="footer-wavy-graphic">
       <svg viewBox="0 0 1440 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 300 70 C 450 35, 620 20, 780 20 C 940 20, 1080 35, 1180 70 Z" fill="#F06A58"/>
-        <path d="M 0 35 C 100 15, 220 15, 360 70 H 0 Z" fill="#84C853"/>
-        <path d="M 1120 70 C 1240 15, 1360 15, 1440 35 V 70 H 1120 Z" fill="#84C853"/>
+        <path d="M 300 70 C 450 35, 620 20, 780 20 C 940 20, 1080 35, 1180 70 Z" fill="#F37160"/>
+        <path d="M 0 35 C 100 15, 220 15, 360 70 H 0 Z" fill="#92CA64"/>
+        <path d="M 1120 70 C 1240 15, 1360 15, 1440 35 V 70 H 1120 Z" fill="#92CA64"/>
       </svg>
     </div>
   </footer>
@@ -484,9 +514,9 @@
         <div style="margin-bottom: 24px;">
           <label style="display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem;">Select Program</label>
           <select class="form-input-control" style="border: 1px solid #DDD;">
-            <option value="Play Group">Play Group</option>
             <option value="Toddler">Toddler</option>
-            <option value="Pre-Nursery">Pre-Nursery</option>
+            <option value="Play Group">Play Group</option>
+            <option value="Nursery">Nursery</option>
             <option value="LKG">LKG</option>
             <option value="UKG">UKG</option>
             <option value="After School">After School</option>
