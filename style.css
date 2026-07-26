@@ -264,11 +264,11 @@ img {
   margin-bottom: 8px;
 }
 
-/* HERO SECTION */
+/* HERO SECTION - 100% FULL SCREEN WIDESCREEN HERO BACKGROUND */
 .hero-section {
   position: relative;
   height: 680px;
-  background: url('/toddler_hero.png?v=9999') center 20% / cover no-repeat;
+  background: url('/toddler_hero.png?v=999111') center center / cover no-repeat;
   image-rendering: -webkit-optimize-contrast;
   display: flex;
   align-items: flex-end;
@@ -285,8 +285,8 @@ img {
   background: linear-gradient(
     180deg, 
     rgba(0, 0, 0, 0.4) 0%, 
-    rgba(0, 0, 0, 0) 30%, 
-    rgba(0, 0, 0, 0) 60%, 
+    rgba(0, 0, 0, 0.1) 35%, 
+    rgba(0, 0, 0, 0.2) 65%, 
     rgba(0, 0, 0, 0.75) 100%
   );
   pointer-events: none;
@@ -306,6 +306,7 @@ img {
   font-size: 3.5rem;
   line-height: 1.15;
   color: var(--figma-white);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
 }
 
 .hero-headline h1 .line-sans {
@@ -324,9 +325,10 @@ img {
 .hero-subtext {
   max-width: 440px;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* Floating Coral Form Bar */
@@ -416,7 +418,7 @@ img {
 
 .program-image-card {
   position: relative;
-  height: 260px;
+  height: 270px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -424,6 +426,7 @@ img {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  cursor: pointer;
 }
 
 .program-image-card:hover {
@@ -435,6 +438,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   filter: brightness(1.04) contrast(1.03) saturate(1.02);
@@ -559,10 +563,17 @@ img {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.studio-green-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .studio-thumb {
-  height: 220px;
+  height: 240px;
   overflow: hidden;
 }
 
@@ -570,6 +581,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   filter: brightness(1.03) contrast(1.02);
 }
 

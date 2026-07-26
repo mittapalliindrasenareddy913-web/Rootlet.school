@@ -36,10 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
     lastScrollY = currentScrollY;
   });
 
-  // Open Modal
+  // Open Modal & Auto-Select Program
   openModalBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      const prog = btn.getAttribute('data-program');
+      if (prog && popupForm) {
+        const select = popupForm.querySelector('select');
+        if (select) {
+          select.value = prog;
+        }
+      }
       if (modalOverlay) {
         modalOverlay.classList.add('active');
       }
