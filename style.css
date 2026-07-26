@@ -419,6 +419,7 @@ img {
 .program-image-card {
   position: relative;
   height: 270px;
+  background-color: #E2DBD0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
