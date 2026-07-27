@@ -103,15 +103,19 @@ document.addEventListener('DOMContentLoaded', () => {
     popupForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const inputs = popupForm.querySelectorAll('.form-input-control');
+      const inputs = popupForm.querySelectorAll('.modal-input');
       const parentName = inputs[0]?.value || '';
-      const phone = inputs[1]?.value || '';
-      const program = inputs[2]?.value || '';
+      const email = inputs[1]?.value || '';
+      const phone = inputs[2]?.value || '';
+      const dob = inputs[3]?.value || '';
+      const program = inputs[4]?.value || '';
 
-      const textMessage = `Hello Rootlet Preschool! I would like to schedule a visit / enquiry:%0A%0A` +
-        `*Parent Name:* ${encodeURIComponent(parentName)}%0A` +
-        `*Phone:* ${encodeURIComponent(phone)}%0A` +
-        `*Program:* ${encodeURIComponent(program)}`;
+      const textMessage = `Hello Rootlet Preschool! I would like to make an Enquiry & Admission request:%0A%0A` +
+        `*Parent / Guardian Name:* ${encodeURIComponent(parentName)}%0A` +
+        `*Email Address:* ${encodeURIComponent(email)}%0A` +
+        `*Phone Number:* ${encodeURIComponent(phone)}%0A` +
+        `*Child DOB:* ${encodeURIComponent(dob)}%0A` +
+        `*Programme of Interest:* ${encodeURIComponent(program)}`;
 
       const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${textMessage}`;
 

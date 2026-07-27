@@ -497,27 +497,45 @@
     </div>
   </footer>
 
-  <!-- Modal Popup -->
+  <!-- Modal Popup (Exact Photo 2 Coral Red Card Design) -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-card">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 8px;">Enquiry & Admission</h3>
-      <p style="color: var(--figma-text-muted); margin-bottom: 24px;">Please submit your details and our team will connect with you on WhatsApp.</p>
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-header-flex">
+        <div class="modal-header-left">
+          <h3 class="modal-title">Enquiry &<br>Admission</h3>
+        </div>
+        <div class="modal-header-right">
+          <p class="modal-subtitle">We'll get back to<br>you within 24 hours.</p>
+        </div>
+      </div>
 
       <form id="popupForm">
-        <div style="margin-bottom: 16px;">
-          <label style="display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem;">Parent's Name *</label>
-          <input type="text" class="form-input-control" style="border: 1px solid #DDD;" placeholder="Enter full name" required>
+        <div class="modal-form-group">
+          <label class="modal-label">Parent / Guardian Name</label>
+          <input type="text" class="modal-input" placeholder="Full name" required>
         </div>
 
-        <div style="margin-bottom: 16px;">
-          <label style="display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem;">Phone Number *</label>
-          <input type="tel" class="form-input-control" style="border: 1px solid #DDD;" placeholder="9876543210" required>
+        <div class="modal-form-group">
+          <label class="modal-label">Email Address</label>
+          <input type="email" class="modal-input" placeholder="example@email.com" required>
         </div>
 
-        <div style="margin-bottom: 24px;">
-          <label style="display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem;">Select Programme</label>
-          <select class="form-input-control" style="border: 1px solid #DDD;">
+        <div class="modal-form-group">
+          <label class="modal-label">Phone Number</label>
+          <input type="tel" class="modal-input" placeholder="9876543210" required>
+        </div>
+
+        <div class="modal-form-group">
+          <label class="modal-label">Child's Date of Birth</label>
+          <input type="text" class="modal-input" placeholder="DD / MM / YYYY">
+        </div>
+
+        <div class="modal-form-group">
+          <label class="modal-label">Programme of Interest</label>
+          <select class="modal-input">
+            <option value="" disabled selected>Select programme</option>
             <option value="Toddler">Toddler</option>
             <option value="Play Group">Play Group</option>
             <option value="Nursery">Nursery</option>
@@ -527,7 +545,7 @@
           </select>
         </div>
 
-        <button type="submit" class="btn-coral" style="width: 100%;">Submit & Connect on WhatsApp</button>
+        <button type="submit" class="modal-submit-btn">Submit</button>
       </form>
     </div>
   </div>
