@@ -975,6 +975,17 @@ img {
   cursor: pointer;
 }
 
+/* Mobile Menu Button Styling */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--figma-white);
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
 /* Responsiveness */
 @media (max-width: 1024px) {
   .hero-content {
@@ -998,14 +1009,55 @@ img {
 }
 
 @media (max-width: 768px) {
-  .header-nav { display: none; }
-  .features-grid, .program-cards-grid, .studios-grid, .foundations-grid {
-    grid-template-columns: 1fr;
+  .header-nav, .header-inner .btn-yellow { display: none; }
+  .mobile-menu-btn { display: block; }
+
+  /* 2-Column Grids matching mobile layout screenshot */
+  .program-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin-bottom: 24px;
   }
+
+  .program-image-card {
+    height: 165px !important;
+    border-radius: 16px !important;
+  }
+
+  .program-card-overlay {
+    padding: 12px 14px !important;
+  }
+
+  .program-card-overlay h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin-bottom: 24px;
+  }
+
+  .studios-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin-bottom: 24px;
+  }
+
+  .foundations-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
   .form-inputs-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
+
   .steps-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  .section-padding {
+    padding: 40px 16px !important;
   }
 }
