@@ -257,7 +257,7 @@ img {
 .hero-section {
   position: relative;
   height: 680px;
-  background: url('/toddler_hero.png?v=999111') center center / cover no-repeat;
+  background: url('/images/toddler_hero.png') center center / cover no-repeat;
   image-rendering: -webkit-optimize-contrast;
   display: flex;
   align-items: flex-end;
@@ -1653,7 +1653,7 @@ select.modal-input {
   /* Mobile Hero Background Clean Cover (Original Photo, No Zoom Distortion) */
   .hero-section {
     height: 710px !important;
-    background-image: url('./images/toddler_hero.png?v=10000') !important;
+    background-image: url('/images/toddler_hero.png') !important;
     background-position: 62% top !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
