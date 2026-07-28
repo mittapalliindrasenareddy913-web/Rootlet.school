@@ -1386,6 +1386,200 @@ select.modal-input {
   display: block;
   transition: color 0.2s ease;
 }
+.modal-card {
+  background-color: #FF6856;
+  width: 100%;
+  max-width: 440px;
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: 32px;
+  padding: 32px 28px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.modal-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+  gap: 12px;
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.modal-subtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.35;
+  text-align: right;
+  margin: 0;
+  padding-top: 6px;
+}
+
+.modal-form-group {
+  margin-bottom: 14px;
+}
+
+.modal-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: #FFFFFF;
+  color: #222222;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.modal-input::placeholder {
+  color: #999999;
+}
+
+select.modal-input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%3C%23333333' d='M6 8.825L1.175 4 2.238 2.938 6 6.7 9.763 2.938 10.825 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  cursor: pointer;
+}
+
+.modal-submit-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: #FFD633;
+  color: #1A1A1A;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.modal-submit-btn:hover {
+  background-color: #FFE052;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Button Styling */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--figma-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* Mobile Navigation Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(18, 24, 16, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 9999;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.35s ease, visibility 0.35s ease;
+  visibility: hidden;
+}
+
+.mobile-nav-drawer.active {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-close-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.drawer-nav-link {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s ease;
+}
 
 .drawer-nav-link:hover {
   color: var(--figma-yellow);
@@ -1414,7 +1608,7 @@ select.modal-input {
 }
 
 @media (max-width: 768px) {
-  /* Exact Figma Inspector Header Properties: 56.59px height, rgba(0,0,0,0.2) bg, 0.6px bottom border rgba(255,255,255,0.1) */
+  /* Exact Figma Inspector Header Properties for Mobile */
   .hero-header {
     top: 0 !important;
     left: 0 !important;
@@ -1505,72 +1699,16 @@ select.modal-input {
     color: rgba(255, 255, 255, 0.8) !important;
   }
 
-  .hero-headline h1 {
-    font-size: 34px !important;
-    line-height: 100% !important;
-    max-width: 360px !important;
-    margin-bottom: 14px !important;
-  }
-
-  .hero-headline h1 .line-sans {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 500 !important;
-    font-size: 34px !important;
-    line-height: 100% !important;
-    letter-spacing: 0px !important;
-    display: block !important;
-    white-space: normal !important;
-  }
-
-  .hero-headline h1 .line-serif {
-    font-family: 'Instrument Serif', serif !important;
-    font-weight: 400 !important;
-    font-size: 34px !important;
-    line-height: 100% !important;
-    letter-spacing: 0px !important;
-    font-style: normal !important;
-    display: block !important;
-  }
-
-  .hero-subtext, .hero-subtext p {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 15px !important;
-    line-height: 24px !important;
-    letter-spacing: 0px !important;
-    color: rgba(255, 255, 255, 0.8) !important;
-    max-width: 353px !important;
-    margin-top: 12px !important;
-    margin-bottom: 20px !important;
-  }
-
-  /* Section 2: Our Program Exact Figma Inspector Match (352.88px x 487.99px, 3 rows x 2 cols, 4px gaps) */
-  .program-section-bg {
-    background-color: #F2E8DB !important;
-    padding: 56px 20px !important;
-  }
-
+  /* 2-Column Grids matching mobile layout screenshot */
   .program-cards-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 4px !important;
-    width: 100% !important;
-    max-width: 352.88px !important;
-    height: 487.99px !important;
-    margin: 0 auto 28px auto !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
   }
 
   .program-image-card {
-    height: 160px !important;
-    border-radius: 0 !important;
-  }
-
-  .program-image-card.card-top-left {
-    border-top-left-radius: 44px !important;
-  }
-
-  .program-image-card.card-top-right {
-    border-top-right-radius: 44px !important;
+    height: 165px !important;
+    border-radius: 16px !important;
   }
 
   .program-card-overlay {
@@ -1581,59 +1719,48 @@ select.modal-input {
     font-size: 1.2rem !important;
   }
 
-  /* Section 3 Typography Exact Figma Match */
-  .features-main-heading {
-    font-family: 'Instrument Serif', Georgia, serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 32px !important;
-    line-height: 38.4px !important;
-    letter-spacing: 0px !important;
-    text-align: center !important;
-    color: #2D2E2A !important;
-    max-width: 353px !important;
-    margin: 0 auto 10px auto !important;
-  }
-
-  .features-main-heading .sans-bold {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 700 !important;
-    font-style: normal !important;
-    font-size: 32px !important;
-    line-height: 38.4px !important;
-    letter-spacing: 0px !important;
-    color: #2D2E2A !important;
-  }
-
-  .features-subtitle {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 14px !important;
-    line-height: 22.4px !important;
-    letter-spacing: 0px !important;
-    text-align: center !important;
-    color: #5C6B64 !important;
-    max-width: 353px !important;
-    margin: 0 auto 28px auto !important;
-  }
-
   .features-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
-    margin-bottom: 24px;
+    margin-bottom: 24px !important;
   }
 
+  /* SECTION 6: LEARNING STUDIOS MOBILE LOCKED OVERRIDE */
   .studios-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
-    margin-bottom: 24px;
+    margin-bottom: 24px !important;
   }
 
-  /* 6 Learning Studio Cards Mobile Typography Exact Figma Inspector Match */
+  .studio-green-card {
+    background-color: #689B48 !important;
+    border-radius: 16px !important;
+    padding: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+    min-height: auto !important;
+  }
+
+  .studio-thumb {
+    height: 140px !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .studio-thumb img {
+    height: 140px !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
   .studio-content {
     padding: 12px !important;
     gap: 4px !important;
+    background-color: #689B48 !important;
+    text-align: center !important;
   }
 
   .studio-content h3 {
@@ -1665,313 +1792,35 @@ select.modal-input {
     gap: 16px !important;
   }
 
+  .form-inputs-grid {
+    grid-template-columns: 1fr !important;
+  }
+
   .steps-grid {
     grid-template-columns: 1fr !important;
-    gap: 16px !important;
   }
 
-  .video-section {
-    height: 240px !important;
-    max-width: 100% !important;
+  .section-padding {
+    padding: 40px 16px !important;
   }
 
-  /* Doctor Suggestions Coral Banner Card Mobile Exact Figma Inspector Match (393px width container, 352px height, padding: 20px 20px 56px 20px) */
-  .admission-banner-card {
-    background-color: var(--logo-coral) !important;
-    border-radius: var(--radius-xl) !important;
-    padding: 28px 24px !important;
-    margin: 40px auto 0 auto !important;
-    max-width: 353px !important;
+  /* SECTION 10: LAST PAGE (FOOTER) MOBILE LOCKED OVERRIDE */
+  .footer-dark-figma {
+    background-color: #252525 !important;
+    padding: 48px 0 0 0 !important;
+    min-height: auto !important;
   }
 
-  .doctor-banner-header h3 {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 18px !important;
-    color: #FFFFFF !important;
-    margin-bottom: 6px !important;
-  }
-
-  .step-item {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
-  }
-
-  .step-num {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 14px !important;
-    line-height: 21px !important;
-    color: var(--figma-yellow) !important;
-    flex-shrink: 0 !important;
-  }
-
-  .step-item p {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 14px !important;
-    line-height: 21px !important;
-    letter-spacing: 0px !important;
-    color: #FFFFFF !important;
-    max-width: 282px !important;
-  }
-
-  /* Section 6 Learning Studios Heading Typography Exact Figma Match */
-  .studios-main-heading {
-    font-family: 'Instrument Serif', Georgia, serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 32px !important;
-    line-height: 38.4px !important;
-    letter-spacing: 0px !important;
-    text-align: center !important;
-    color: #2D2E2A !important;
-    max-width: 353px !important;
-    margin: 0 auto 28px auto !important;
-  }
-
-  .studios-main-heading .sans-bold {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 700 !important;
-    font-style: normal !important;
-    font-size: 32px !important;
-    line-height: 38.4px !important;
-    letter-spacing: 0px !important;
-    color: #2D2E2A !important;
-  }
-
-  /* Video Banner Mobile Exact Figma Inspector Match */
-  .video-section {
-    height: 220px !important;
-  }
-
-  .video-top-left-content {
-    top: 16px !important;
-    left: 18px !important;
-  }
-
-  .video-title .serif-text {
-    font-family: 'Instrument Serif', Georgia, serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 15px !important;
-    line-height: 100% !important;
-    letter-spacing: 0px !important;
-    color: #FFFFFF !important;
-  }
-
-  .video-title .sans-bold {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 700 !important;
-    font-style: normal !important;
-    font-size: 15px !important;
-    line-height: 100% !important;
-    letter-spacing: 0px !important;
-    color: #FFFFFF !important;
-  }
-
-  .video-subtitle {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 500 !important;
-    font-style: normal !important;
-    font-size: 10px !important;
-    line-height: 9.06px !important;
-    letter-spacing: 0px !important;
-    color: rgba(255, 255, 255, 0.85) !important;
-  }
-
-  /* Section 8 Foundations Mobile Typography Exact Figma Match */
-  .foundations-main-heading {
-    font-family: 'Instrument Serif', Georgia, serif !important;
-    font-weight: 400 !important;
-    font-style: italic !important;
-    font-size: 32px !important;
-    line-height: 38.4px !important;
-    letter-spacing: 0px !important;
-    text-align: center !important;
-    color: #2D2E2A !important;
-    max-width: 306px !important;
-    margin: 0 auto 28px auto !important;
-  }
-
-  .foundations-main-heading .serif-italic {
-    font-family: 'Instrument Serif', Georgia, serif !important;
-    font-weight: 400 !important;
-    font-style: italic !important;
-    font-size: 32px !important;
-    line-height: 38.4px !important;
-    letter-spacing: 0px !important;
-    color: #2D2E2A !important;
-  }
-
-  .foundations-main-heading .sans-bold {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 700 !important;
-    font-style: normal !important;
-    font-size: 32px !important;
-    line-height: 38.4px !important;
-    letter-spacing: 0px !important;
-    color: #2D2E2A !important;
-  }
-
-  .foundation-card p {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 14px !important;
-    line-height: 22.4px !important;
-    letter-spacing: 0px !important;
-    color: #4A4A4A !important;
-    max-width: 304px !important;
-  }
-
-  /* Section 9 Green CTA Banner Mobile Exact Figma Inspector Match (393px width, 580px height, padding: 80px 24px, #90C963) */
-  .cta-fullwidth-green {
-    background-color: #90C963 !important;
-    padding: 80px 24px !important;
-    min-height: 580px !important;
-  }
-
-  .final-cta-heading {
-    font-family: 'Instrument Serif', Georgia, serif !important;
-    font-weight: 400 !important;
-    font-style: italic !important;
-    font-size: 36px !important;
-    line-height: 115% !important;
-    letter-spacing: -1px !important;
-    text-align: center !important;
-    color: #2D2E2A !important;
-    max-width: 345px !important;
-    margin: 0 auto 12px auto !important;
-  }
-
-  .final-cta-heading .serif-italic {
-    font-family: 'Instrument Serif', Georgia, serif !important;
-    font-weight: 400 !important;
-    font-style: italic !important;
-    font-size: 36px !important;
-    line-height: 115% !important;
-    letter-spacing: -1px !important;
-    color: #2D2E2A !important;
-  }
-
-  .final-cta-heading .sans-bold {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 700 !important;
-    font-style: normal !important;
-    font-size: 36px !important;
-    line-height: 115% !important;
-    letter-spacing: -1px !important;
-    color: #2D2E2A !important;
-  }
-
-  .final-cta-subtitle {
-    font-family: 'Instrument Sans', sans-serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 16px !important;
-    line-height: 24px !important;
-    letter-spacing: 0px !important;
-    text-align: center !important;
-    color: #2D2E2A !important;
-    max-width: 345px !important;
-    margin: 0 auto 24px auto !important;
-  }
-
-  /* 4 Corner Floating Photos Exact Figma Inspector Mobile Match (100% VISIBLE) */
-  .cta-floating-photos-container {
-    min-height: 520px !important;
-    width: 100% !important;
-    position: relative !important;
+  .footer-figma-grid {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 30px 0 !important;
-  }
-
-  .cta-thumb {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: absolute !important;
-    z-index: 5 !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
-  }
-
-  .cta-thumb img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
-
-  /* 1. Top Left: Boy in green hoodie */
-  .cta-thumb-1 {
-    top: 12px !important;
-    left: 8px !important;
-    width: 96px !important;
-    height: 96px !important;
-    transform: rotate(-6deg) !important;
-    border-radius: 12px !important;
-  }
-
-  /* 2. Top Right: Modern preschool building (Exact 107.77px x 100.44px from Figma Inspector) */
-  .cta-thumb-3 {
-    top: 12px !important;
-    right: 8px !important;
-    width: 107px !important;
-    height: 100px !important;
-    transform: rotate(16deg) !important;
-    border-radius: 8px !important;
-  }
-
-  /* 3. Bottom Left: Preschool building sunset view */
-  .cta-thumb-2 {
-    bottom: 12px !important;
-    left: 8px !important;
-    width: 100px !important;
-    height: 95px !important;
-    transform: rotate(-12deg) !important;
-    border-radius: 12px !important;
-  }
-
-  /* 4. Bottom Right: Child with yellow ball eyes */
-  .cta-thumb-4 {
-    bottom: 12px !important;
-    right: 8px !important;
-    width: 100px !important;
-    height: 95px !important;
-    transform: rotate(8deg) !important;
-    border-radius: 12px !important;
-  }
-
-  /* Mobile Enquire About Enrolment Card (Displayed Right After Green CTA Banner) */
-  .mobile-enquiry-section {
-    display: block !important;
-    background-color: #F2E8DB !important;
-    padding: 40px 16px 60px 16px !important;
-  }
-
-  .mobile-enquiry-section .coral-form-bar {
-    background-color: var(--logo-coral) !important;
-    border-radius: var(--radius-xl) !important;
-    padding: 32px 24px !important;
-    max-width: 353px !important;
-    margin: 0 auto !important;
-    box-shadow: 0 12px 32px rgba(243, 113, 96, 0.25) !important;
-  }
-
-  /* Footer Mobile Layout Exact Figma Inspector Match (Frame 2147224234) */
-  .footer-bottom-columns-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1.3fr !important;
-    gap: 24px !important;
+    gap: 32px !important;
     margin-bottom: 32px !important;
-    text-align: left !important;
+    padding: 0 20px !important;
+  }
+
+  .footer-brand-logo img {
+    height: 40px !important;
   }
 
   .footer-col-title {
@@ -1980,7 +1829,7 @@ select.modal-input {
     font-size: 12px !important;
     letter-spacing: 0.5px !important;
     color: #FFFFFF !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 14px !important;
     text-transform: uppercase !important;
   }
 
@@ -2008,7 +1857,11 @@ select.modal-input {
     color: #A3A3A3 !important;
   }
 
-  .section-padding {
-    padding: 40px 16px !important;
+  .footer-wavy-graphic {
+    height: 40px !important;
+  }
+
+  .footer-wavy-graphic svg {
+    height: 40px !important;
   }
 }
