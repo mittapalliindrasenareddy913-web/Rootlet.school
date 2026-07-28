@@ -128,4 +128,32 @@ document.addEventListener('DOMContentLoaded', () => {
       popupForm.reset();
     });
   }
+
+  // 4. MOBILE DRAWER NAVIGATION TOGGLE
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+  const drawerNavLinks = document.querySelectorAll('.drawer-nav-link');
+
+  if (mobileMenuBtn && mobileNavDrawer) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      mobileNavDrawer.classList.add('active');
+    });
+  }
+
+  if (drawerCloseBtn && mobileNavDrawer) {
+    drawerCloseBtn.addEventListener('click', () => {
+      mobileNavDrawer.classList.remove('active');
+    });
+  }
+
+  drawerNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileNavDrawer) {
+        mobileNavDrawer.classList.remove('active');
+      }
+    });
+  });
 });

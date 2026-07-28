@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 368 72" width="368" height="72">
+  <g fill="#FFFFFF">
+    <!-- Heart sprout leaf icon -->
+    <path d="M 28 62 C 28 50, 18 40, 10 35 C 3 30, 0 22, 3 14 C 7 4, 18 -1, 28 2 C 37 5, 43 14, 42 24 C 41 32, 36 39, 30 45 C 28 47, 28 54, 28 62 Z"/>
+    <path d="M 28 22 C 34 14, 45 10, 55 14 C 65 18, 71 28, 68 38 C 65 47, 56 53, 46 51 C 38 49, 32 43, 29 36 Z"/>
+    <!-- Rootlet brand name in crisp vector serif text -->
+    <text x="80" y="52" font-family="'Instrument Serif', 'DM Serif Display', Georgia, serif" font-size="56" font-weight="400" fill="#FFFFFF" letter-spacing="-0.5">Rootlet</text>
+  </g>
+</svg>
