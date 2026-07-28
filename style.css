@@ -49,6 +49,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -57,6 +59,7 @@ body {
   color: var(--figma-text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Typography Helpers */
@@ -580,6 +583,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.mobile-enquiry-section {
+  display: none;
 }
 
 .doctor-banner-header h3 {
@@ -1699,16 +1706,41 @@ select.modal-input {
     color: rgba(255, 255, 255, 0.8) !important;
   }
 
-  /* 2-Column Grids matching mobile layout screenshot */
+  /* Section 2: Our Program Exact Figma Inspector Match (Width: 352.88px, Height: 487.99px, Rows: 3, Columns: 2, Row Gap: 4px, Column Gap: 4px) */
   .program-cards-grid {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-    margin-bottom: 24px !important;
+    grid-template-rows: repeat(3, 160px) !important;
+    gap: 4px !important;
+    row-gap: 4px !important;
+    column-gap: 4px !important;
+    width: 100% !important;
+    max-width: 352.88px !important;
+    height: 487.99px !important;
+    margin: 0 auto 28px auto !important;
   }
 
   .program-image-card {
-    height: 165px !important;
-    border-radius: 16px !important;
+    height: 160px !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .program-image-card.card-top-left {
+    border-top-left-radius: 44px !important;
+  }
+
+  .program-image-card.card-top-right {
+    border-top-right-radius: 44px !important;
+  }
+
+  .program-image-card.card-bottom-left {
+    border-radius: 0 !important;
+  }
+
+  .program-image-card.card-bottom-right {
+    border-radius: 0 !important;
   }
 
   .program-card-overlay {
@@ -1719,10 +1751,123 @@ select.modal-input {
     font-size: 1.2rem !important;
   }
 
+  /* SECTION 3: FEATURES SECTION EXACT FIGMA INSPECTOR MATCH (393px width, padding: 56px 20px, #F2E8DB bg) */
+  #about {
+    background-color: #F2E8DB !important;
+    padding: 56px 20px !important;
+    max-width: 393px !important;
+    margin: 0 auto !important;
+  }
+
+  .features-main-heading {
+    font-family: 'Instrument Serif', Georgia, serif !important;
+    font-weight: 400 !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
+    text-align: center !important;
+    color: #2D2E2A !important;
+    max-width: 353px !important;
+    margin: 0 auto 10px auto !important;
+    white-space: normal !important;
+  }
+
+  .features-main-heading span.line-one {
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+
   .features-grid {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .feature-white-card {
+    background: #FFFFFF !important;
+    border-radius: 20px !important;
+    padding: 20px 12px !important;
+    min-height: 156px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: none !important;
+  }
+
+  .feature-circle-icon {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .feature-white-card h4 {
+    font-family: 'Instrument Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    color: #2D2E2A !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  /* Doctor Suggestions Coral Banner Card Mobile Exact Figma Inspector Match (Width: 352.88px, Height: 296px Hug, Radius: 24px, Padding: 24px, Gap: 24px, Color: #F2705F) */
+  .admission-banner-card {
+    background-color: #F2705F !important;
+    border-radius: 24px !important;
+    padding: 24px !important;
+    max-width: 352.88px !important;
+    min-height: 296px !important;
+    width: 100% !important;
+    margin: 36px auto 0 auto !important;
+    box-shadow: 0 12px 32px rgba(242, 112, 95, 0.25) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    text-align: left !important;
+  }
+
+  .doctor-banner-header h3 {
+    font-family: 'Instrument Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+    color: #FFFFFF !important;
+    margin: 0 0 4px 0 !important;
+  }
+
+  .steps-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .step-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .step-num {
+    font-family: 'Instrument Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: #FFD633 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .step-item p {
+    font-family: 'Instrument Sans', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 13.5px !important;
+    line-height: 20px !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+    max-width: 280px !important;
   }
 
   /* SECTION 6: LEARNING STUDIOS MOBILE LOCKED OVERRIDE */
@@ -1800,37 +1945,214 @@ select.modal-input {
     grid-template-columns: 1fr !important;
   }
 
+  /* SECTION 9: GREEN CTA BANNER MOBILE EXACT FIGMA INSPECTOR MATCH (Matching Photo 2 - Outer Corners Layout) */
+  .cta-fullwidth-green {
+    background-color: #90C963 !important;
+    padding: 70px 20px !important;
+    height: 580px !important;
+    min-height: 580px !important;
+    max-width: 393px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .cta-floating-photos-container {
+    height: 100% !important;
+    min-height: 440px !important;
+    width: 100% !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .cta-center-text {
+    position: relative !important;
+    z-index: 10 !important;
+    text-align: center !important;
+    max-width: 330px !important;
+    margin: 0 auto !important;
+  }
+
+  .final-cta-heading {
+    font-family: 'Instrument Serif', Georgia, serif !important;
+    font-size: 36px !important;
+    line-height: 110% !important;
+    letter-spacing: -0.5px !important;
+    text-align: center !important;
+    color: #2D2E2A !important;
+    margin-bottom: 12px !important;
+  }
+
+  .final-cta-heading .serif-italic {
+    font-family: 'Instrument Serif', Georgia, serif !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+    font-size: 36px !important;
+    line-height: 110% !important;
+    color: #2D2E2A !important;
+  }
+
+  .final-cta-heading .sans-bold {
+    font-family: 'Instrument Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    font-size: 36px !important;
+    line-height: 110% !important;
+    color: #2D2E2A !important;
+  }
+
+  .final-cta-subtitle {
+    font-family: 'Instrument Sans', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    line-height: 22px !important;
+    color: #2D2E2A !important;
+    max-width: 290px !important;
+    margin: 0 auto 16px auto !important;
+  }
+
+  /* 4 Floating Corner Photo Cards Mobile (Pushed Wide to 4 Outer Corners - Matching Photo 2) */
+  .cta-thumb {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    z-index: 2 !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .cta-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* 1. Top Left: Boy in green hoodie */
+  .cta-thumb-1 {
+    top: 14px !important;
+    left: 8px !important;
+    width: 90px !important;
+    height: 90px !important;
+    transform: rotate(-6deg) !important;
+    border-radius: 14px !important;
+  }
+
+  /* 2. Top Right: Modern preschool building architecture */
+  .cta-thumb-3 {
+    top: 14px !important;
+    right: 8px !important;
+    width: 98px !important;
+    height: 92px !important;
+    transform: rotate(16deg) !important;
+    border-radius: 10px !important;
+  }
+
+  /* 3. Bottom Left: Preschool building sunset view */
+  .cta-thumb-2 {
+    bottom: 14px !important;
+    left: 8px !important;
+    width: 95px !important;
+    height: 90px !important;
+    transform: rotate(-12deg) !important;
+    border-radius: 12px !important;
+  }
+
+  /* 4. Bottom Right: Child playing with yellow balls */
+  .cta-thumb-4 {
+    bottom: 14px !important;
+    right: 8px !important;
+    width: 95px !important;
+    height: 90px !important;
+    transform: rotate(8deg) !important;
+    border-radius: 12px !important;
+  }
+
+  /* Mobile Enquire About Enrolment Card (Displayed Right After Green CTA Banner on Mobile Viewport Only) */
+  .mobile-enquiry-section {
+    display: block !important;
+    background-color: #F2E8DB !important;
+    padding: 40px 16px 60px 16px !important;
+  }
+
+  .mobile-enquiry-section .coral-form-bar {
+    background-color: #F37160 !important;
+    border-radius: 32px !important;
+    padding: 32px 24px !important;
+    max-width: 353px !important;
+    margin: 0 auto !important;
+    box-shadow: 0 12px 32px rgba(243, 113, 96, 0.25) !important;
+  }
+
   .section-padding {
     padding: 40px 16px !important;
   }
 
-  /* SECTION 10: LAST PAGE (FOOTER) MOBILE LOCKED OVERRIDE */
+  /* SECTION 10: LAST PAGE (FOOTER) MOBILE EXACT FIGMA INSPECTOR MATCH (Outer: 393px width, 577.45px height, padding 48px 20px, #252525; Inner: 352.88px width, 481.45px height, gap 40px) */
   .footer-dark-figma {
     background-color: #252525 !important;
-    padding: 48px 0 0 0 !important;
-    min-height: auto !important;
+    padding: 48px 20px 0 20px !important;
+    max-width: 393px !important;
+    min-height: 577.45px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .footer-dark-figma .container {
+    max-width: 352.88px !important;
+    min-height: 481.45px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
   }
 
   .footer-figma-grid {
     display: flex !important;
     flex-direction: column !important;
-    gap: 32px !important;
-    margin-bottom: 32px !important;
-    padding: 0 20px !important;
+    gap: 40px !important;
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+  }
+
+  .footer-bottom-columns-grid {
+    display: grid !important;
+    grid-template-columns: 105px 1fr !important;
+    gap: 24px !important;
+    text-align: left !important;
   }
 
   .footer-brand-logo img {
-    height: 40px !important;
+    height: 44px !important;
+  }
+
+  .footer-social-inline {
+    display: flex !important;
+    gap: 22px !important;
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .footer-social-inline a {
+    color: #A3A3A3 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
   }
 
   .footer-col-title {
     font-family: 'Instrument Sans', sans-serif !important;
     font-weight: 700 !important;
     font-size: 12px !important;
-    letter-spacing: 0.5px !important;
+    letter-spacing: 0.8px !important;
     color: #FFFFFF !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 16px !important;
     text-transform: uppercase !important;
+    white-space: nowrap !important;
   }
 
   .footer-links-column-list {
@@ -1839,12 +2161,12 @@ select.modal-input {
     margin: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 10px !important;
+    gap: 12px !important;
   }
 
   .footer-links-column-list a {
     color: #A3A3A3 !important;
-    font-size: 13px !important;
+    font-size: 13.5px !important;
     text-decoration: none !important;
   }
 
@@ -1852,16 +2174,32 @@ select.modal-input {
     display: flex !important;
     align-items: flex-start !important;
     gap: 10px !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 16px !important;
     font-size: 13px !important;
+    line-height: 1.45 !important;
     color: #A3A3A3 !important;
   }
 
+  .footer-divider-line {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .footer-bottom-flex {
+    padding: 0 0 70px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+    font-size: 12px !important;
+    color: #737373 !important;
+  }
+
   .footer-wavy-graphic {
-    height: 40px !important;
+    height: 57.09px !important;
   }
 
   .footer-wavy-graphic svg {
-    height: 40px !important;
+    height: 57.09px !important;
   }
 }
