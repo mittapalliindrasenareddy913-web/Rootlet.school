@@ -1850,23 +1850,44 @@ select.modal-input {
   }
 
   .features-main-heading {
-    font-family: 'Instrument Serif', Georgia, serif !important;
-    font-weight: 400 !important;
-    font-size: 28px !important;
-    line-height: 34px !important;
     text-align: center !important;
     color: #2D2E2A !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto 10px auto !important;
-    white-space: normal !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
+    line-height: 1.15 !important;
   }
 
-  .features-main-heading span {
-    white-space: normal !important;
-    display: inline !important;
+  .features-main-heading .heading-line-1 {
+    display: block !important;
+    white-space: nowrap !important;
+    font-size: 24px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 2px 0 !important;
+    padding: 0 !important;
+  }
+
+  .features-main-heading .heading-line-2 {
+    display: block !important;
+    white-space: nowrap !important;
+    font-size: 24px !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .features-main-heading .serif-text {
+    font-family: 'Instrument Serif', Georgia, serif !important;
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    line-height: 1.15 !important;
+  }
+
+  .features-main-heading .sans-bold {
+    font-family: 'Instrument Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 1.15 !important;
   }
 
   .features-grid {
