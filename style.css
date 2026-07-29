@@ -1614,6 +1614,44 @@ select.modal-input {
   .cta-thumb { display: none; }
 }
 
+/* DESKTOP VIEW OVERRIDES (Preserves 3-Column Footer and 3x2 Program Grid Layout) */
+@media (min-width: 769px) {
+  /* Footer Desktop 3-Column Grid Fix */
+  .footer-bottom-columns-grid {
+    display: contents !important;
+  }
+
+  /* Our Programmes Desktop 3x2 Grid Fix */
+  .program-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(2, 320px) !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: 1280px !important;
+    height: 640px !important;
+    margin: 0 auto 40px auto !important;
+  }
+
+  .program-image-card {
+    height: 320px !important;
+    border-radius: 0 !important;
+  }
+
+  .program-image-card.card-top-left {
+    border-top-left-radius: 64px !important;
+  }
+
+  .program-image-card.card-top-right {
+    border-top-right-radius: 0 !important;
+  }
+
+  /* Card 3 (Pre-Nursery) is Top Right on Desktop 3-column Grid */
+  .program-image-card:nth-child(3) {
+    border-top-right-radius: 64px !important;
+  }
+}
+
 @media (max-width: 768px) {
   /* ==========================================================================
      GLOBAL UNIFIED MOBILE RESPONSIVE LAYOUT SYSTEM (18px Side Padding Token)
