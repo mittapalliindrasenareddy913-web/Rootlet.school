@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100">
+  <!-- Sprout Icon -->
+  <g transform="translate(0, 0)">
+    <!-- Green Sprout Leaf -->
+    <path d="M 28 66 C 28 52, 18 40, 10 35 C 3 30, 0 20, 4 12 C 9 2, 20 -2, 30 2 C 39 5, 45 15, 43 26 C 42 34, 36 41, 30 47 C 28 49, 28 58, 28 66 Z" fill="#8DC63F"/>
+    <path d="M 28 24 C 34 16, 46 12, 56 16 C 66 20, 72 30, 69 40 C 66 49, 57 55, 47 53 C 39 51, 33 45, 30 38 Z" fill="#8DC63F"/>
+    <!-- Coral Dot at Bottom -->
+    <circle cx="28" cy="78" r="5" fill="#F37160"/>
+  </g>
+
+  <!-- Coral Red Rootlet Text -->
+  <text x="86" y="65" font-family="'Instrument Serif', Georgia, serif" font-size="64" font-weight="400" fill="#F37160" letter-spacing="-0.5">Rootlet</text>
+
+  <!-- Tagline underneath: for Tiny Learners -->
+  <text x="245" y="88" font-family="'Instrument Sans', sans-serif" font-size="20" font-weight="500" fill="#92CA64">for Tiny Learners</text>
+</svg>
