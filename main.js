@@ -69,31 +69,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Helper function to extract form values and build full WhatsApp URL
+  const buildWhatsAppUrl = (form, headingText) => {
+    const parentName = form.elements['parentName']?.value || form.querySelector('input[type="text"]')?.value || '';
+    const email = form.elements['email']?.value || form.querySelector('input[type="email"]')?.value || '';
+    const phone = form.elements['phone']?.value || form.querySelector('input[type="tel"]')?.value || '';
+    const dob = form.elements['dob']?.value || '';
+    const program = form.elements['program']?.value || form.querySelector('select')?.value || '';
+
+    const textMessage = `${headingText}\n\n` +
+      `👤 *Parent / Guardian Name:* ${parentName}\n` +
+      `📧 *Email Address:* ${email}\n` +
+      `📞 *Phone Number:* ${phone}\n` +
+      `👶 *Child's Date of Birth:* ${dob}\n` +
+      `🏫 *Programme of Interest:* ${program}`;
+
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(textMessage)}`;
+  };
+
   // 2. HERO ENQUIRY FORM SUBMISSION -> WHATSAPP REDIRECT
   if (heroForm) {
     heroForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const inputs = heroForm.querySelectorAll('.form-input-control');
-      const parentName = inputs[0]?.value || '';
-      const email = inputs[1]?.value || '';
-      const phone = inputs[2]?.value || '';
-      const dob = inputs[3]?.value || '';
-      const program = inputs[4]?.value || '';
-
-      // Construct formatted WhatsApp message
-      const textMessage = `Hello Rootlet Preschool! I would like to enquire about enrolment:%0A%0A` +
-        `*Parent Name:* ${encodeURIComponent(parentName)}%0A` +
-        `*Email:* ${encodeURIComponent(email)}%0A` +
-        `*Phone:* ${encodeURIComponent(phone)}%0A` +
-        `*Child DOB:* ${encodeURIComponent(dob)}%0A` +
-        `*Program:* ${encodeURIComponent(program)}`;
-
-      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${textMessage}`;
-
-      // Open WhatsApp in new tab
+      const whatsappUrl = buildWhatsAppUrl(heroForm, 'Hello Rootlet Preschool! I would like to make an enquiry:');
       window.open(whatsappUrl, '_blank');
-
       heroForm.reset();
     });
   }
@@ -103,23 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     popupForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const inputs = popupForm.querySelectorAll('.modal-input');
-      const parentName = inputs[0]?.value || '';
-      const email = inputs[1]?.value || '';
-      const phone = inputs[2]?.value || '';
-      const dob = inputs[3]?.value || '';
-      const program = inputs[4]?.value || '';
-
-      const textMessage = `Hello Rootlet Preschool! I would like to make an Enquiry & Admission request:%0A%0A` +
-        `*Parent / Guardian Name:* ${encodeURIComponent(parentName)}%0A` +
-        `*Email Address:* ${encodeURIComponent(email)}%0A` +
-        `*Phone Number:* ${encodeURIComponent(phone)}%0A` +
-        `*Child DOB:* ${encodeURIComponent(dob)}%0A` +
-        `*Programme of Interest:* ${encodeURIComponent(program)}`;
-
-      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${textMessage}`;
-
-      // Open WhatsApp in new tab
+      const whatsappUrl = buildWhatsAppUrl(popupForm, 'Hello Rootlet Preschool! I would like to make an Enquiry & Admission request:');
       window.open(whatsappUrl, '_blank');
 
       if (modalOverlay) {

@@ -4,4 +4,4 @@ dist
 *.log
 upscale.py
 crop_curly_toddler.py
-find_curly_toddler.py
+Pictures/
