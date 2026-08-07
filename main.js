@@ -74,8 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const parentName = form.elements['parentName']?.value || form.querySelector('input[type="text"]')?.value || '';
     const email = form.elements['email']?.value || form.querySelector('input[type="email"]')?.value || '';
     const phone = form.elements['phone']?.value || form.querySelector('input[type="tel"]')?.value || '';
-    const dob = form.elements['dob']?.value || '';
+    const rawDob = form.elements['dob']?.value || '';
     const program = form.elements['program']?.value || form.querySelector('select')?.value || '';
+
+    // Format YYYY-MM-DD from datepicker to DD/MM/YYYY
+    let dob = rawDob;
+    if (rawDob && rawDob.includes('-')) {
+      const parts = rawDob.split('-');
+      if (parts.length === 3) {
+        dob = `${parts[2]}/${parts[1]}/${parts[0]}`;
+      }
+    }
 
     const textMessage = `${headingText}\n\n` +
       `👤 *Parent / Guardian Name:* ${parentName}\n` +

@@ -113,7 +113,7 @@
         <!-- 4. Child's Date of Birth -->
         <div class="form-group-item">
           <label>Child's Date of Birth</label>
-          <input type="text" name="dob" class="form-input-control" placeholder="DD / MM / YYYY" onfocus="(this.type='date')" required>
+          <input type="date" name="dob" class="form-input-control" onclick="try{this.showPicker()}catch(e){}" onfocus="try{this.showPicker()}catch(e){}" required>
         </div>
 
         <!-- 5. Programme of Interest -->
@@ -607,7 +607,7 @@
 
         <div class="modal-form-group">
           <label class="modal-label">Child's Date of Birth</label>
-          <input type="text" name="dob" class="modal-input" placeholder="DD / MM / YYYY">
+          <input type="date" name="dob" class="modal-input" onclick="try{this.showPicker()}catch(e){}" onfocus="try{this.showPicker()}catch(e){}" required>
         </div>
 
         <div class="modal-form-group">

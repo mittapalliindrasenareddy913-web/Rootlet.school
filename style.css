@@ -402,6 +402,17 @@ img {
   height: 48px;
 }
 
+input[type="date"] {
+  cursor: pointer;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.7;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
 /* OUR PROGRAMMES - EXACT FIGMA MATCH (#F2E8DB BG & ARCHED TOP CORNERS) */
 .program-section-bg {
   background-color: #F2E8DB;
